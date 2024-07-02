@@ -1,5 +1,3 @@
-import sys
-sys.path.append('..')
 from gmapy.gma_database_class import GMADatabase
 from gmapy.posterior_usu import PosteriorUSU
 from gmapy.mcmc_inference import mh_algo
@@ -16,7 +14,7 @@ import scipy.sparse as sps
 import numpy as np
 
 
-gmadb = GMADatabase('../../legacy-tests/test_004/input/data.gma')
+gmadb = GMADatabase('../../gmapy/legacy-tests/test_004/input/data.gma')
 
 dt = gmadb.get_datatable()
 covmat = gmadb.get_covmat()
@@ -61,7 +59,7 @@ postdist = PosteriorUSU(
     unc_idcs=unc_idcs, unc_group_assoc=unc_group_assoc
 )
 
-uncvec = np.full(len(postdist._groups), 0.1)
+uncvec = np.full(len(postdist._groups), 0.05)
 startvals = np.concatenate([priorvals + 1e-4, uncvec])
 lm_res = lm_update(postdist, startvals=startvals, print_status=True, rtol=1e-5)
 
