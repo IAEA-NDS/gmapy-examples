@@ -1,0 +1,3 @@
+[submodule "gmapy"]
+	path = gmapy
+	url = https://github.com/iaea-nds/gmapy
