@@ -13,8 +13,8 @@ from gmapy.mappings.tf.restricted_map import RestrictedMap
 from gmapy.gmap import run_gmap_simplified
 from gmapy.legacy.legacy_gmap import run_gmap
 
-thisdir = '/home/gschnabel/Seafile/OmegaSpace/development/codeproj/gitrepos/gmapy/examples/tensorflow/example-005-std2017/output_backup/'
-# thisdir = '/home/gschnabel/Seafile/OmegaSpace/development/codeproj/gitrepos/gmapy/examples/tensorflow/example-009/output/'
+thisdir = '../../tensorflow/example-005-std2017/output_backup/'
+# thisdir = '../../tensorflow/example-009/output/'
 
 # load the priortable
 priortable, exptable, expcov, is_adj = load_objects(thisdir + '01_model_preparation_output.pkl', 'priortable', 'exptable', 'expcov', 'is_adj')
@@ -124,7 +124,7 @@ outdt[selcrit]
 
 
 gmap_res = run_gmap_simplified(
-    dbfile='../../../legacy-tests/test_002/input/data.gma',
+    dbfile='../../../gmapy/legacy-tests/test_002/input/data.gma',
     num_iter=8
 )
 gmap_restable = gmap_res['table']
@@ -136,7 +136,7 @@ outdt['GMAP'] = gmap_res
 
 
 legacy_gmap_res = run_gmap(
-    dbfile='../../../legacy-tests/test_002/input/data.gma',
+    dbfile='../../../gmapy/legacy-tests/test_002/input/data.gma',
     fix_sacs_jacobian=False,
     legacy_integration=True,
     remove_dummy=False, fix_ppp_bug=False, 
