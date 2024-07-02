@@ -1,7 +1,5 @@
 import sys
-sys.path.append('..')
-sys.path.append('../..')
-sys.path.append('../../..')
+sys.path.append('..')  # for utils package
 from copy import deepcopy
 from gmapy.data_management.datablock_list import DatablockList
 from gmapy.gmap import run_gmap_simplified
@@ -55,7 +53,7 @@ def remove_thermal_axton(datablock_list):
 
 
 # read the database with NIFFTE TPC data
-dbpath = '../../../legacy-tests/test_004/input/data.gma'
+dbpath = '../../../gmapy/legacy-tests/test_004/input/data.gma'
 db_dic = read_legacy_gma_database(dbpath)
 prior_list = db_dic['prior_list']
 
