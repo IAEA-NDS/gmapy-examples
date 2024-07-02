@@ -1,5 +1,3 @@
-import sys
-sys.path.append('../../..')
 import pandas as pd
 from scipy.sparse import block_diag
 import numpy as np

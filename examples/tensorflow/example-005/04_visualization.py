@@ -1,5 +1,3 @@
-import sys
-sys.path.append('../..')
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
@@ -37,6 +35,3 @@ plt.show()
 
 from gmapy.mcmc_inference import compute_effective_sample_size
 compute_effective_sample_size(np.abs(chain[:,11]))
-
-
-

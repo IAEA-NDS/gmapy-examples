@@ -1,5 +1,3 @@
-import sys
-sys.path.append('../../..')
 import time
 import gc
 import tensorflow as tf

@@ -1,5 +1,3 @@
-import sys
-sys.path.append('../../..')
 import pandas as pd
 from scipy.sparse import block_diag
 import numpy as np
@@ -41,7 +39,7 @@ tfd = tfp.distributions
 tfb = tfp.bijectors
 
 # retrieve prior estimates and covariances from the database
-db_path = '../../../legacy-tests/test_004/input/data.gma'
+db_path = '../../../gmapy/legacy-tests/test_004/input/data.gma'
 db = read_gma_database(db_path)
 remove_dummy_datasets(db['datablock_list'])
 

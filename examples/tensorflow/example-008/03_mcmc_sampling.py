@@ -1,5 +1,3 @@
-import sys
-sys.path.append('../../..')
 import time
 import tensorflow as tf
 import tensorflow_probability as tfp

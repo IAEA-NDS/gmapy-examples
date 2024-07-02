@@ -1,5 +1,3 @@
-import sys
-sys.path.append('../../..')
 import time
 from gmapy.tf_uq.inference import generate_MCMC_chain
 from gmapy.data_management.object_utils import (
